@@ -1,0 +1,381 @@
+
+/* =========================================
+   PROJETO 01 — INVENTÁRIO DE REDE
+========================================= */
+
+.projeto-inventario-rede .conteudo-projeto-inventario {
+    padding: 20px;
+}
+
+.projeto-inventario-rede .inventario-cabecalho {
+    padding: 30px;
+    border-radius: 16px;
+    color: #fff;
+    background: linear-gradient(135deg, #102b50, #1766a5);
+    margin-bottom: 25px;
+}
+
+.projeto-inventario-rede .inventario-etiqueta {
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.projeto-inventario-rede .inventario-cabecalho h3 {
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.projeto-inventario-rede .inventario-cabecalho p {
+    line-height: 1.6;
+    color: #e5eef8;
+}
+
+.projeto-inventario-rede .inventario-indicadores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.projeto-inventario-rede .inventario-indicadores span {
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.2);
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.projeto-inventario-rede .inventario-lista-documentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+}
+
+.projeto-inventario-rede .inventario-documento {
+    background: #fff;
+    border: 1px solid #dce5ef;
+    border-radius: 15px;
+    padding: 22px;
+    box-shadow: 0 5px 18px rgba(15, 40, 70, .07);
+}
+
+.projeto-inventario-rede .inventario-documento-topo {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.projeto-inventario-rede .inventario-numero {
+    color: #2365a0;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.projeto-inventario-rede .inventario-status {
+    background: #e7f2ff;
+    color: #175a96;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.projeto-inventario-rede .inventario-documento h3 {
+    color: #183654;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.projeto-inventario-rede .inventario-documento p {
+    color: #5b6b7c;
+    line-height: 1.6;
+}
+
+.projeto-inventario-rede .inventario-equipamentos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.projeto-inventario-rede .equipamento-item {
+    background: #f1f6fb;
+    border: 1px solid #e0eaf3;
+    border-radius: 10px;
+    padding: 12px 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.projeto-inventario-rede .equipamento-icone {
+    font-size: 23px;
+}
+
+.projeto-inventario-rede .equipamento-item strong {
+    color: #145b98;
+    font-size: 20px;
+}
+
+.projeto-inventario-rede .equipamento-item small {
+    color: #52677d;
+    font-size: 11px;
+}
+
+.projeto-inventario-rede .resumo-rede-ip {
+    display: grid;
+    gap: 9px;
+    margin: 20px 0;
+}
+
+.projeto-inventario-rede .resumo-rede-ip div {
+    padding: 12px;
+    background: #f1f6fb;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.projeto-inventario-rede .resumo-rede-ip small {
+    color: #63788d;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.projeto-inventario-rede .resumo-rede-ip strong {
+    color: #155c99;
+    overflow-wrap: anywhere;
+}
+
+.projeto-inventario-rede .inventario-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.projeto-inventario-rede .botao-visualizar-inventario,
+.projeto-inventario-rede .botao-pdf-inventario {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.projeto-inventario-rede .botao-visualizar-inventario {
+    background: #1766a5;
+    color: #fff;
+}
+
+.projeto-inventario-rede .botao-visualizar-inventario:hover {
+    background: #104b7b;
+}
+
+.projeto-inventario-rede .botao-pdf-inventario {
+    background: #e8f0f8;
+    color: #174b79;
+}
+
+.projeto-inventario-rede .botao-pdf-inventario:hover {
+    background: #d5e5f4;
+}
+
+/* =========================================
+   VISUALIZADOR INTERNO
+========================================= */
+
+.projeto-inventario-rede .visualizador-inventario {
+    margin-top: 22px;
+    border: 1px solid #d6e1ec;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.projeto-inventario-rede .visualizador-inventario[hidden] {
+    display: none;
+}
+
+.projeto-inventario-rede .visualizador-inventario-topo {
+    background: #102b50;
+    color: #fff;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.projeto-inventario-rede .visualizador-inventario-topo span {
+    font-size: 10px;
+    letter-spacing: 1px;
+    opacity: .8;
+}
+
+.projeto-inventario-rede .visualizador-inventario-topo h4 {
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.projeto-inventario-rede .visualizador-inventario-topo .documento-marcador {
+    background: rgba(255,255,255,.15);
+    padding: 7px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.projeto-inventario-rede .documento-interno {
+    padding: 25px;
+    color: #26384a;
+    line-height: 1.7;
+}
+
+.projeto-inventario-rede .documento-interno h3 {
+    color: #153b60;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.projeto-inventario-rede .documento-interno h4 {
+    color: #175b95;
+    margin: 22px 0 10px;
+}
+
+.projeto-inventario-rede .documento-interno hr {
+    border: none;
+    border-top: 1px solid #dce5ed;
+    margin: 20px 0;
+}
+
+.projeto-inventario-rede .tabela-inventario {
+    width: 100%;
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+.projeto-inventario-rede .tabela-inventario table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.projeto-inventario-rede .tabela-inventario th {
+    background: #eaf2fa;
+    color: #174b79;
+    text-align: left;
+}
+
+.projeto-inventario-rede .tabela-inventario th,
+.projeto-inventario-rede .tabela-inventario td {
+    padding: 11px;
+    border: 1px solid #dce5ed;
+}
+
+.projeto-inventario-rede .tabela-inventario tr:nth-child(even) {
+    background: #f7fafd;
+}
+
+.projeto-inventario-rede .dados-rede-ip {
+    background: #f1f6fb;
+    border-left: 4px solid #1766a5;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.projeto-inventario-rede .documento-final {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #dce5ed;
+    font-weight: bold;
+    color: #175b95;
+}
+
+/* =========================================
+   RESPONSIVIDADE — INVENTÁRIO
+========================================= */
+
+@media (max-width: 600px) {
+
+    .projeto-inventario-rede .conteudo-projeto-inventario {
+        padding: 12px;
+    }
+
+    .projeto-inventario-rede .inventario-cabecalho {
+        padding: 22px;
+    }
+
+    .projeto-inventario-rede .inventario-cabecalho h3 {
+        font-size: 23px;
+    }
+
+    .projeto-inventario-rede .inventario-equipamentos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projeto-inventario-rede .inventario-acoes {
+        flex-direction: column;
+    }
+
+    .projeto-inventario-rede .botao-visualizar-inventario,
+    .projeto-inventario-rede .botao-pdf-inventario {
+        width: 100%;
+    }
+
+    .projeto-inventario-rede .documento-interno {
+        padding: 15px;
+    }
+
+    .projeto-inventario-rede .visualizador-inventario-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========================================
+   PADRONIZAÇÃO DOS TÓPICOS — MEUS PROJETOS
+========================================= */
+
+.projetos-sanfona > details {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.projetos-sanfona > details > summary {
+    width: 100% !important;
+    height: 100px !important;
+    min-height: 100px !important;
+    box-sizing: border-box;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding: 20px 28px;
+}
+
+.projetos-sanfona > details > summary > span:first-child {
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+
+    .projetos-sanfona > details > summary {
+        height: 100px !important;
+        min-height: 100px !important;
+        padding: 15px 18px;
+    }
+}

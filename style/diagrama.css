@@ -1,0 +1,424 @@
+
+/* =========================================
+   PROJETO 02 — DIAGRAMA LÓGICO
+========================================= */
+
+.projeto-diagrama-rede .conteudo-diagrama {
+    padding: 20px;
+}
+
+.projeto-diagrama-rede .diagrama-cabecalho {
+    background: linear-gradient(135deg, #102b50, #1766a5);
+    color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+}
+
+.projeto-diagrama-rede .diagrama-etiqueta {
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.projeto-diagrama-rede .diagrama-cabecalho h3 {
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.projeto-diagrama-rede .diagrama-cabecalho p {
+    color: #e5eef8;
+    line-height: 1.6;
+}
+
+.projeto-diagrama-rede .diagrama-indicadores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.projeto-diagrama-rede .diagrama-indicadores span {
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.2);
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.projeto-diagrama-rede .diagrama-resumo,
+.projeto-diagrama-rede .diagrama-previa {
+    background: #fff;
+    border: 1px solid #dce5ef;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 22px;
+}
+
+.projeto-diagrama-rede .diagrama-resumo h3,
+.projeto-diagrama-rede .diagrama-previa h3 {
+    color: #183654;
+    margin-bottom: 10px;
+}
+
+.projeto-diagrama-rede .diagrama-resumo p {
+    color: #5b6b7c;
+    line-height: 1.6;
+}
+
+.projeto-diagrama-rede .diagrama-resumo-dados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.projeto-diagrama-rede .diagrama-resumo-dados div {
+    background: #f1f6fb;
+    padding: 13px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.projeto-diagrama-rede .diagrama-resumo-dados small {
+    font-size: 10px;
+    font-weight: bold;
+    color: #63788d;
+}
+
+.projeto-diagrama-rede .diagrama-resumo-dados strong {
+    color: #155c99;
+    overflow-wrap: anywhere;
+}
+
+.projeto-diagrama-rede .diagrama-fluxo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 5px;
+}
+
+.projeto-diagrama-rede .diagrama-no {
+    width: min(100%, 290px);
+    padding: 16px;
+    border: 1px solid #d5e3f0;
+    border-radius: 12px;
+    background: #f1f6fb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+    box-shadow: 0 3px 9px rgba(15, 40, 70, .05);
+}
+
+.projeto-diagrama-rede .diagrama-no > span {
+    font-size: 26px;
+}
+
+.projeto-diagrama-rede .diagrama-no strong {
+    color: #173d61;
+    font-size: 14px;
+}
+
+.projeto-diagrama-rede .diagrama-no small {
+    color: #60758a;
+    font-size: 12px;
+}
+
+.projeto-diagrama-rede .diagrama-no.internet {
+    background: #e9f4ff;
+    border-color: #b9d7f3;
+}
+
+.projeto-diagrama-rede .diagrama-no.roteador {
+    background: #edf5ff;
+}
+
+.projeto-diagrama-rede .diagrama-no.switch {
+    background: #eaf5f2;
+    border-color: #c4e4d8;
+}
+
+.projeto-diagrama-rede .diagrama-no.dispositivo {
+    background: #f7f9fc;
+}
+
+.projeto-diagrama-rede .diagrama-conector {
+    color: #3975a8;
+    font-size: 28px;
+    font-weight: bold;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.projeto-diagrama-rede .diagrama-dispositivos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* BOTÕES */
+
+.projeto-diagrama-rede .diagrama-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.projeto-diagrama-rede .botao-visualizar-diagrama,
+.projeto-diagrama-rede .botao-pdf-diagrama {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.projeto-diagrama-rede .botao-visualizar-diagrama {
+    background: #1766a5;
+    color: #fff;
+}
+
+.projeto-diagrama-rede .botao-visualizar-diagrama:hover {
+    background: #104b7b;
+}
+
+.projeto-diagrama-rede .botao-pdf-diagrama {
+    background: #e8f0f8;
+    color: #174b79;
+}
+
+.projeto-diagrama-rede .botao-pdf-diagrama:hover {
+    background: #d5e5f4;
+}
+
+/* VISUALIZADOR */
+
+.projeto-diagrama-rede .visualizador-diagrama {
+    margin-top: 22px;
+    border: 1px solid #d6e1ec;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.projeto-diagrama-rede .visualizador-diagrama[hidden] {
+    display: none;
+}
+
+.projeto-diagrama-rede .visualizador-diagrama-topo {
+    background: #102b50;
+    color: #fff;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.projeto-diagrama-rede .visualizador-diagrama-topo span {
+    font-size: 10px;
+    letter-spacing: 1px;
+    opacity: .8;
+}
+
+.projeto-diagrama-rede .visualizador-diagrama-topo h4 {
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.projeto-diagrama-rede .diagrama-marcador {
+    background: rgba(255,255,255,.15);
+    padding: 7px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.projeto-diagrama-rede .diagrama-documento {
+    padding: 25px;
+    color: #26384a;
+    line-height: 1.7;
+}
+
+.projeto-diagrama-rede .diagrama-documento h3 {
+    color: #153b60;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.projeto-diagrama-rede .diagrama-documento h4 {
+    color: #175b95;
+    margin: 22px 0 10px;
+}
+
+.projeto-diagrama-rede .diagrama-documento hr {
+    border: none;
+    border-top: 1px solid #dce5ed;
+    margin: 20px 0;
+}
+
+/* DIAGRAMA COMPLETO */
+
+.projeto-diagrama-rede .diagrama-completo {
+    background: #f7fafd;
+    border: 1px solid #dce5ed;
+    border-radius: 12px;
+    padding: 25px 12px;
+    margin: 18px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projeto-diagrama-rede .diagrama-linha-vertical {
+    height: 27px;
+    width: 2px;
+    background: #3975a8;
+}
+
+.projeto-diagrama-rede .diagrama-linha-horizontal {
+    height: 2px;
+    width: 66%;
+    background: #3975a8;
+}
+
+.projeto-diagrama-rede .diagrama-ramificacoes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.projeto-diagrama-rede .diagrama-ramo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projeto-diagrama-rede .diagrama-ramo .diagrama-no {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 5px;
+}
+
+.projeto-diagrama-rede .diagrama-ramo .diagrama-no strong {
+    font-size: 12px;
+}
+
+.projeto-diagrama-rede .diagrama-ramo .diagrama-no small {
+    overflow-wrap: anywhere;
+    font-size: 10px;
+}
+
+/* TABELA */
+
+.projeto-diagrama-rede .diagrama-tabela {
+    width: 100%;
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+.projeto-diagrama-rede .diagrama-tabela table {
+    width: 100%;
+    min-width: 570px;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.projeto-diagrama-rede .diagrama-tabela th {
+    background: #eaf2fa;
+    color: #174b79;
+    text-align: left;
+}
+
+.projeto-diagrama-rede .diagrama-tabela th,
+.projeto-diagrama-rede .diagrama-tabela td {
+    padding: 11px;
+    border: 1px solid #dce5ed;
+}
+
+.projeto-diagrama-rede .diagrama-tabela tr:nth-child(even) {
+    background: #f7fafd;
+}
+
+.projeto-diagrama-rede .diagrama-nota {
+    background: #fff7e8;
+    border-left: 4px solid #d49a35;
+    color: #674b1e;
+    padding: 15px;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+.projeto-diagrama-rede .diagrama-fim {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #dce5ed;
+    font-weight: bold;
+    color: #175b95;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .projeto-diagrama-rede .conteudo-diagrama {
+        padding: 12px;
+    }
+
+    .projeto-diagrama-rede .diagrama-cabecalho {
+        padding: 22px;
+    }
+
+    .projeto-diagrama-rede .diagrama-cabecalho h3 {
+        font-size: 23px;
+    }
+
+    .projeto-diagrama-rede .diagrama-dispositivos {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-diagrama-rede .diagrama-ramificacoes {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .projeto-diagrama-rede .diagrama-linha-horizontal {
+        display: none;
+    }
+
+    .projeto-diagrama-rede .diagrama-ramo .diagrama-linha-vertical {
+        height: 20px;
+    }
+
+    .projeto-diagrama-rede .diagrama-acoes {
+        flex-direction: column;
+    }
+
+    .projeto-diagrama-rede .botao-visualizar-diagrama,
+    .projeto-diagrama-rede .botao-pdf-diagrama {
+        width: 100%;
+    }
+
+    .projeto-diagrama-rede .diagrama-documento {
+        padding: 15px;
+    }
+
+    .projeto-diagrama-rede .visualizador-diagrama-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

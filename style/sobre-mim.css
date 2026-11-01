@@ -1,0 +1,90 @@
+/* ==========================================
+   17. SEÇÃO SOBRE MIM
+========================================== */
+
+#sobre-mim {
+    padding: clamp(20px, 4vw, 40px);
+    background: #111c30;
+    border: 1px solid #24344d;
+    border-radius: 16px;
+    scroll-margin-top: 25px;
+}
+
+.sobre-mim-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 4vw, 40px);
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 35px;
+}
+
+.foto-sobre-mim {
+    display: block;
+    width: clamp(150px, 25vw, 250px);
+    max-width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid #38bdf8;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+.texto-sobre-mim {
+    flex: 1;
+    min-width: 0;
+}
+
+.texto-sobre-mim h3 {
+    color: #38bdf8;
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    line-height: 1.4;
+    margin-bottom: 16px;
+    overflow-wrap: anywhere;
+}
+
+.texto-sobre-mim p {
+    color: #d1d5db;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+/* Responsividade para tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .sobre-mim-conteudo {
+        gap: 22px;
+    }
+
+    .foto-sobre-mim {
+        width: clamp(140px, 25vw, 210px);
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    #sobre-mim {
+        padding: 22px 15px;
+        border-radius: 12px;
+    }
+
+    .sobre-mim-conteudo {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .foto-sobre-mim {
+        width: min(70%, 210px);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+    }
+
+    .texto-sobre-mim {
+        width: 100%;
+        flex: none;
+    }
+}

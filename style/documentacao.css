@@ -1,0 +1,408 @@
+
+/* =========================================
+   PROJETO 04 — CENTRAL DE DOCUMENTAÇÃO
+========================================= */
+
+.projeto-documentacao .doc-hero {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    overflow: hidden;
+    padding: 35px;
+    margin-bottom: 28px;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 18px;
+    color: #eaf6ff;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(14, 165, 233, 0.25), transparent 35%),
+        linear-gradient(135deg, #07172c, #102d4b 60%, #0b2038);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.projeto-documentacao .doc-hero-conteudo {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+}
+
+.projeto-documentacao .doc-etiqueta {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #67e8f9;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.projeto-documentacao .doc-hero h3 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.projeto-documentacao .doc-hero p {
+    max-width: 580px;
+    color: #c6d9e9;
+    line-height: 1.7;
+}
+
+.projeto-documentacao .doc-indicadores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 25px;
+}
+
+.projeto-documentacao .doc-indicadores div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.projeto-documentacao .doc-indicadores strong {
+    color: #67e8f9;
+    font-size: 1.35rem;
+}
+
+.projeto-documentacao .doc-indicadores span {
+    color: #b8ccdf;
+    font-size: 0.78rem;
+}
+
+.projeto-documentacao .doc-hero-icone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 145px;
+    height: 145px;
+    border: 1px solid rgba(103, 232, 249, 0.3);
+    border-radius: 25px;
+    color: #67e8f9;
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 4rem;
+}
+
+.projeto-documentacao .doc-hero-icone span:nth-child(2),
+.projeto-documentacao .doc-hero-icone span:nth-child(3) {
+    position: absolute;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.projeto-documentacao .doc-hero-icone span:nth-child(2) {
+    top: 12px;
+    right: 15px;
+}
+
+.projeto-documentacao .doc-hero-icone span:nth-child(3) {
+    bottom: 12px;
+    left: 15px;
+}
+
+.projeto-documentacao .doc-introducao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0 18px;
+}
+
+.projeto-documentacao .doc-introducao p {
+    margin: 0;
+    color: #42566b;
+    font-weight: 700;
+}
+
+.projeto-documentacao .doc-ponto {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #06b6d4;
+    box-shadow: 0 0 0 5px rgba(6, 182, 212, 0.12);
+}
+
+.projeto-documentacao .doc-grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.projeto-documentacao .doc-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 23px;
+    border: 1px solid #dce7f0;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(15, 40, 70, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.projeto-documentacao .doc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 40, 70, 0.12);
+}
+
+.projeto-documentacao .doc-card-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.projeto-documentacao .doc-numero {
+    color: #087eaa;
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.projeto-documentacao .doc-tipo {
+    padding: 6px 10px;
+    border-radius: 20px;
+    color: #087eaa;
+    background: #e8f8fc;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.projeto-documentacao .doc-card-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 22px 0 13px;
+    border-radius: 13px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #087eaa, #164e80);
+    font-size: 1.6rem;
+}
+
+.projeto-documentacao .doc-card h4 {
+    margin: 0 0 10px;
+    color: #102a43;
+    font-size: 1.08rem;
+    line-height: 1.4;
+}
+
+.projeto-documentacao .doc-card > p {
+    flex-grow: 1;
+    margin: 0 0 20px;
+    color: #607286;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.projeto-documentacao .doc-botao {
+    width: 100%;
+    min-height: 45px;
+    padding: 11px 15px;
+    border: 0;
+    border-radius: 9px;
+    color: #ffffff;
+    background: #0d547e;
+    cursor: pointer;
+    font-size: 0.86rem;
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.projeto-documentacao .doc-botao:hover {
+    background: #087eaa;
+    transform: translateY(-2px);
+}
+
+.projeto-documentacao .doc-botao:focus-visible {
+    outline: 3px solid #67e8f9;
+    outline-offset: 3px;
+}
+
+.projeto-documentacao .doc-visualizador {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #dce7f0;
+    animation: docAparecer 0.3s ease;
+}
+
+.projeto-documentacao .doc-visualizador[hidden] {
+    display: none !important;
+}
+
+.projeto-documentacao .doc-folha {
+    padding: 22px;
+    border: 1px solid #e0e8ef;
+    border-radius: 10px;
+    background: #f8fbfd;
+}
+
+.projeto-documentacao .doc-folha-etiqueta {
+    color: #087eaa;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.projeto-documentacao .doc-folha h4 {
+    margin: 10px 0 20px;
+    color: #102a43;
+    font-size: 1.15rem;
+}
+
+.projeto-documentacao .doc-folha h5 {
+    margin: 22px 0 10px;
+    color: #0d547e;
+    font-size: 0.95rem;
+}
+
+.projeto-documentacao .doc-folha p,
+.projeto-documentacao .doc-folha li {
+    color: #40566b;
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.projeto-documentacao .doc-folha ul {
+    padding-left: 20px;
+}
+
+.projeto-documentacao .doc-dados {
+    padding: 12px 15px;
+    border-left: 3px solid #0891b2;
+    border-radius: 5px;
+    background: #edf7fb;
+}
+
+.projeto-documentacao .doc-dados p {
+    margin: 5px 0;
+}
+
+.projeto-documentacao .doc-folha pre {
+    overflow-x: auto;
+    padding: 13px 15px;
+    border-radius: 8px;
+    color: #a5f3fc;
+    background: #102a43;
+    font-size: 0.86rem;
+}
+
+.projeto-documentacao .doc-tabela {
+    overflow-x: auto;
+}
+
+.projeto-documentacao .doc-tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+}
+
+.projeto-documentacao .doc-tabela th,
+.projeto-documentacao .doc-tabela td {
+    padding: 10px;
+    border: 1px solid #dce7f0;
+    text-align: left;
+}
+
+.projeto-documentacao .doc-tabela th {
+    color: #ffffff;
+    background: #164e80;
+}
+
+.projeto-documentacao .doc-tabela td {
+    color: #40566b;
+    background: #ffffff;
+}
+
+.projeto-documentacao .doc-aviso {
+    margin-top: 20px;
+    padding: 14px;
+    border-left: 4px solid #0891b2;
+    border-radius: 6px;
+    color: #31536b;
+    background: #eaf7fb;
+    font-size: 0.84rem;
+    line-height: 1.7;
+}
+
+.projeto-documentacao .doc-nota-final {
+    display: flex;
+    gap: 14px;
+    margin-top: 28px;
+    padding: 20px;
+    border: 1px solid #cde7f0;
+    border-radius: 12px;
+    color: #31536b;
+    background: #f0f9fc;
+}
+
+.projeto-documentacao .doc-nota-final > span {
+    color: #087eaa;
+    font-size: 1.5rem;
+}
+
+.projeto-documentacao .doc-nota-final strong {
+    color: #164e80;
+}
+
+.projeto-documentacao .doc-nota-final p {
+    margin: 6px 0 0;
+    font-size: 0.87rem;
+    line-height: 1.7;
+}
+
+@keyframes docAparecer {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+    .projeto-documentacao .doc-hero {
+        padding: 25px 20px;
+    }
+
+    .projeto-documentacao .doc-hero-icone {
+        width: 85px;
+        height: 85px;
+        font-size: 2.7rem;
+    }
+
+    .projeto-documentacao .doc-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-documentacao .doc-indicadores {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 450px) {
+    .projeto-documentacao .doc-hero-icone {
+        display: none;
+    }
+
+    .projeto-documentacao .doc-card {
+        padding: 18px;
+    }
+
+    .projeto-documentacao .doc-folha {
+        padding: 15px;
+    }
+
+    .projeto-documentacao .doc-tabela table {
+        font-size: 0.74rem;
+    }
+}

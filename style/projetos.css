@@ -1,0 +1,180 @@
+
+/* ==========================================
+   PROJETO 01 — INVENTÁRIO DE REDE EMPRESARIAL
+   ========================================== */
+
+.projetos-sanfona details.projeto-inventario {
+    margin: 24px 0;
+    overflow: hidden;
+    border: 1px solid #dbe4ef;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 28px rgba(15, 35, 65, 0.08);
+}
+
+.projetos-sanfona details.projeto-inventario > summary {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 26px 60px 26px 28px;
+    color: #ffffff;
+    background: linear-gradient(120deg, #0b1f35, #124c78);
+    cursor: pointer;
+    list-style: none;
+}
+
+.projetos-sanfona details.projeto-inventario > summary::-webkit-details-marker {
+    display: none;
+}
+
+.projetos-sanfona details.projeto-inventario > summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    color: #93c5fd;
+    font-size: 30px;
+}
+
+.projetos-sanfona details.projeto-inventario[open] > summary::after {
+    content: "−";
+}
+
+.projetos-sanfona .projeto-inventario .titulo-projeto {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.projetos-sanfona .projeto-inventario .resumo-projeto {
+    color: #d7e9f8;
+    font-size: 0.95rem;
+}
+
+.projetos-sanfona details.projeto-inventario > .conteudo-projeto {
+    padding: 28px;
+    color: #334155;
+    background: #ffffff;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.projetos-sanfona .projeto-inventario .conteudo-projeto h3 {
+    margin: 28px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e5edf5;
+    color: #123b5d;
+    font-size: 1.15rem;
+}
+
+.projetos-sanfona .projeto-inventario .conteudo-projeto h3:first-child {
+    margin-top: 0;
+}
+
+.projetos-sanfona .projeto-inventario .conteudo-projeto p {
+    margin-bottom: 16px;
+}
+
+.projetos-sanfona .projeto-inventario .conteudo-projeto ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.projetos-sanfona .projeto-inventario .conteudo-projeto li {
+    min-width: 0;
+    margin: 0;
+    padding: 16px;
+    border: 1px solid #e0e8f2;
+    border-radius: 12px;
+    background: #f8fafc;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.projetos-sanfona .projeto-inventario .conteudo-projeto li:hover {
+    border-color: #93c5fd;
+    background: #f0f7ff;
+}
+
+.projetos-sanfona .projeto-inventario .conteudo-projeto li strong {
+    color: #173f60;
+}
+
+.projetos-sanfona .projeto-inventario .downloads-inventario {
+    margin: 22px 0;
+    padding: 22px;
+    border: 1px solid #dbe7f2;
+    border-radius: 14px;
+    background: #f3f8fd;
+}
+
+.projetos-sanfona .projeto-inventario .downloads-inventario h4 {
+    margin: 20px 0 8px;
+    color: #123b5d;
+}
+
+.projetos-sanfona .projeto-inventario .downloads-inventario h4:first-child {
+    margin-top: 0;
+}
+
+.projetos-sanfona .projeto-inventario .botao-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 8px 5px 0;
+    padding: 11px 18px;
+    border: 1px solid #1769aa;
+    border-radius: 9px;
+    background: #1769aa;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.projetos-sanfona .projeto-inventario .botao-download:hover {
+    background: #104b7b;
+    color: #ffffff;
+}
+
+.projetos-sanfona .projeto-inventario .status-projeto {
+    margin-top: 24px;
+    padding: 16px;
+    border-left: 5px solid #d99a24;
+    border-radius: 8px;
+    background: #fff8e8;
+    color: #664b15;
+}
+
+@media (max-width: 700px) {
+    .projetos-sanfona details.projeto-inventario > .conteudo-projeto {
+        padding: 20px 16px;
+    }
+
+    .projetos-sanfona .projeto-inventario .conteudo-projeto ul {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos-sanfona details.projeto-inventario > summary {
+        padding: 22px 48px 22px 18px;
+    }
+
+    .projetos-sanfona .projeto-inventario .downloads-inventario {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .projetos-sanfona .projeto-inventario .botao-download {
+        width: 100%;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+}

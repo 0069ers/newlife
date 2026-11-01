@@ -1,0 +1,950 @@
+
+/* ==========================================
+   PROJETO 03 — RELATÓRIOS TÉCNICOS
+   ========================================== */
+
+.projeto-relatorios .cabecalho-relatorios {
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #102b46, #1769aa);
+    color: #ffffff;
+}
+
+.projeto-relatorios .etiqueta-relatorios {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #9bdcff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.projeto-relatorios .cabecalho-relatorios h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.projeto-relatorios .cabecalho-relatorios p {
+    max-width: 650px;
+    color: #d8e8f5;
+    line-height: 1.7;
+}
+
+.projeto-relatorios .resumo-documentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.projeto-relatorios .resumo-documentos span {
+    padding: 7px 12px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    color: #ffffff;
+    font-size: 0.78rem;
+}
+
+
+/* LISTA DE RELATÓRIOS */
+
+.projeto-relatorios .lista-relatorios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin: 25px 0;
+}
+
+.projeto-relatorios .cartao-relatorio {
+    padding: 23px;
+    border: 1px solid #dce6f0;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 5px 18px rgba(15, 35, 65, 0.045);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.projeto-relatorios .cartao-relatorio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(15, 35, 65, 0.10);
+}
+
+.projeto-relatorios .topo-cartao-relatorio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.projeto-relatorios .icone-relatorio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    background: #e7f2fc;
+    color: #1769aa;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.projeto-relatorios .titulo-cartao-relatorio {
+    flex: 1;
+    min-width: 0;
+}
+
+.projeto-relatorios .titulo-cartao-relatorio h4 {
+    margin: 0 0 4px;
+    color: #123b5d;
+    font-size: 1.05rem;
+}
+
+.projeto-relatorios .titulo-cartao-relatorio p {
+    margin: 0;
+    color: #718096;
+    font-size: 0.82rem;
+}
+
+.projeto-relatorios .status-relatorio {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #e7f7ed;
+    color: #16713b;
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.projeto-relatorios .descricao-relatorio {
+    margin: 17px 0;
+    color: #526174;
+    line-height: 1.7;
+    font-size: 0.93rem;
+}
+
+
+/* BOTÕES */
+
+.projeto-relatorios .acoes-relatorio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.projeto-relatorios .acoes-relatorio button,
+.projeto-relatorios .acoes-relatorio a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 42px;
+    padding: 10px 17px;
+    border: 0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.projeto-relatorios .botao-visualizar {
+    background: #1769aa;
+    color: #ffffff;
+}
+
+.projeto-relatorios .botao-visualizar:hover {
+    background: #105486;
+    transform: translateY(-2px);
+}
+
+.projeto-relatorios .botao-pdf {
+    background: #edf3f8;
+    color: #16466c;
+}
+
+.projeto-relatorios .botao-pdf:hover {
+    background: #dceaf5;
+    transform: translateY(-2px);
+}
+
+
+/* VISUALIZADOR INTERNO */
+
+.projeto-relatorios .visualizador-relatorio {
+    margin-top: 22px;
+    border: 1px solid #d6e2ed;
+    border-radius: 13px;
+    overflow: hidden;
+    background: #ffffff;
+    animation: aparecerRelatorio 0.35s ease;
+}
+
+.projeto-relatorios .visualizador-relatorio[hidden] {
+    display: none;
+}
+
+@keyframes aparecerRelatorio {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* CABEÇALHO DO DOCUMENTO */
+
+.projeto-relatorios .documento-cabecalho {
+    padding: 25px;
+    background: linear-gradient(135deg, #102b46, #1769aa);
+    color: #ffffff;
+}
+
+.projeto-relatorios .documento-cabecalho > span {
+    color: #9bdcff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.projeto-relatorios .documento-cabecalho h3 {
+    margin: 12px 0 8px;
+    color: #ffffff;
+    font-size: 1.4rem;
+    line-height: 1.35;
+}
+
+.projeto-relatorios .documento-cabecalho p {
+    margin: 0;
+    color: #d5e5f3;
+    font-size: 0.87rem;
+    line-height: 1.7;
+}
+
+
+/* CORPO DO DOCUMENTO */
+
+.projeto-relatorios .documento-corpo {
+    padding: 26px;
+    color: #344256;
+}
+
+.projeto-relatorios .documento-corpo h5 {
+    margin: 25px 0 12px;
+    padding-left: 12px;
+    border-left: 4px solid #2683c6;
+    color: #123b5d;
+    font-size: 1rem;
+}
+
+.projeto-relatorios .documento-corpo h5:first-child {
+    margin-top: 0;
+}
+
+.projeto-relatorios .documento-corpo > p {
+    margin: 10px 0;
+    color: #4b5b6c;
+    line-height: 1.8;
+    font-size: 0.93rem;
+}
+
+
+/* TABELA DE RESULTADOS */
+
+.projeto-relatorios .tabela-relatorio {
+    display: grid;
+    gap: 0;
+    margin-top: 14px;
+    border: 1px solid #dce6ef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.projeto-relatorios .tabela-relatorio div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 15px;
+    background: #f8fbfe;
+    border-bottom: 1px solid #e4ebf2;
+}
+
+.projeto-relatorios .tabela-relatorio div:last-child {
+    border-bottom: 0;
+}
+
+.projeto-relatorios .tabela-relatorio span {
+    color: #5b6b7b;
+    font-size: 0.88rem;
+}
+
+.projeto-relatorios .tabela-relatorio strong {
+    color: #123b5d;
+    font-size: 0.88rem;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+
+/* BLOCOS DE COMANDO */
+
+.projeto-relatorios .comando-relatorio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 14px 0;
+    padding: 15px;
+    border-radius: 9px;
+    background: #102b46;
+}
+
+.projeto-relatorios .comando-relatorio span {
+    color: #9bdcff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.projeto-relatorios .comando-relatorio code {
+    color: #ffffff;
+    font-family: Consolas, monospace;
+    font-size: 0.88rem;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+
+/* RESULTADOS DOS TESTES */
+
+.projeto-relatorios .resultado-relatorio {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin: 14px 0;
+    padding: 16px;
+    border: 1px solid #d7eee0;
+    border-radius: 10px;
+    background: #f1faf4;
+}
+
+.projeto-relatorios .indicador-sucesso {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+    margin-top: 5px;
+    border-radius: 50%;
+    background: #20a45b;
+    box-shadow: 0 0 0 4px #d7f3e1;
+}
+
+.projeto-relatorios .resultado-relatorio strong {
+    color: #176b3a;
+    font-size: 0.9rem;
+}
+
+.projeto-relatorios .resultado-relatorio p {
+    margin: 5px 0 0;
+    color: #4b6656;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+
+/* OBSERVAÇÕES */
+
+.projeto-relatorios .observacao-relatorio {
+    padding: 16px;
+    border-left: 4px solid #d69e2e;
+    border-radius: 7px;
+    background: #fff9e9;
+    color: #72551c;
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.projeto-relatorios .fim-documento {
+    margin-top: 27px;
+    padding-top: 17px;
+    border-top: 1px solid #e1e8ef;
+    color: #8190a0;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* NOTA FINAL */
+
+.projeto-relatorios .nota-final-relatorios {
+    margin-top: 25px;
+    padding: 17px;
+    border: 1px solid #dce6ef;
+    border-radius: 10px;
+    background: #f3f7fb;
+    color: #536477;
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.projeto-relatorios .nota-final-relatorios strong {
+    color: #123b5d;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .projeto-relatorios .cabecalho-relatorios {
+        padding: 20px;
+    }
+
+    .projeto-relatorios .cabecalho-relatorios h3 {
+        font-size: 1.45rem;
+    }
+
+    .projeto-relatorios .cartao-relatorio {
+        padding: 17px;
+    }
+
+    .projeto-relatorios .topo-cartao-relatorio {
+        flex-wrap: wrap;
+    }
+
+    .projeto-relatorios .status-relatorio {
+        margin-left: 63px;
+    }
+
+    .projeto-relatorios .acoes-relatorio {
+        flex-direction: column;
+    }
+
+    .projeto-relatorios .acoes-relatorio button,
+    .projeto-relatorios .acoes-relatorio a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .projeto-relatorios .documento-cabecalho {
+        padding: 20px;
+    }
+
+    .projeto-relatorios .documento-cabecalho h3 {
+        font-size: 1.2rem;
+    }
+
+    .projeto-relatorios .documento-corpo {
+        padding: 19px;
+    }
+
+    .projeto-relatorios .tabela-relatorio div {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .projeto-relatorios .tabela-relatorio strong {
+        text-align: left;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   PROJETO 03 — RELATÓRIOS TÉCNICOS
+   ========================================== */
+
+.projeto-relatorios .cabecalho-relatorios {
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #102b46, #1769aa);
+    color: #ffffff;
+}
+
+.projeto-relatorios .etiqueta-relatorios {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #9bdcff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.projeto-relatorios .cabecalho-relatorios h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.projeto-relatorios .cabecalho-relatorios p {
+    max-width: 650px;
+    color: #d8e8f5;
+    line-height: 1.7;
+}
+
+.projeto-relatorios .resumo-documentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.projeto-relatorios .resumo-documentos span {
+    padding: 7px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 0.78rem;
+}
+
+/* LISTA DE RELATÓRIOS */
+
+.projeto-relatorios .lista-relatorios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin: 25px 0;
+}
+
+.projeto-relatorios .cartao-relatorio {
+    padding: 23px;
+    border: 1px solid #dce6f0;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 5px 18px rgba(15, 35, 65, 0.045);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.projeto-relatorios .cartao-relatorio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(15, 35, 65, 0.10);
+}
+
+.projeto-relatorios .topo-cartao-relatorio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.projeto-relatorios .icone-relatorio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    background: #e7f2fc;
+    color: #1769aa;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.projeto-relatorios .titulo-cartao-relatorio {
+    flex: 1;
+    min-width: 0;
+}
+
+.projeto-relatorios .titulo-cartao-relatorio h4 {
+    margin: 0 0 4px;
+    color: #123b5d;
+    font-size: 1.05rem;
+}
+
+.projeto-relatorios .titulo-cartao-relatorio p {
+    margin: 0;
+    color: #718096;
+    font-size: 0.82rem;
+}
+
+.projeto-relatorios .status-relatorio {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #e7f7ed;
+    color: #16713b;
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.projeto-relatorios .descricao-relatorio {
+    margin: 17px 0;
+    color: #526174;
+    line-height: 1.7;
+    font-size: 0.93rem;
+}
+
+/* BOTÕES */
+
+.projeto-relatorios .acoes-relatorio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.projeto-relatorios .acoes-relatorio button,
+.projeto-relatorios .acoes-relatorio a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 42px;
+    padding: 10px 17px;
+    border: 0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.projeto-relatorios .botao-visualizar {
+    background: #1769aa;
+    color: #ffffff;
+}
+
+.projeto-relatorios .botao-visualizar:hover {
+    background: #105486;
+    transform: translateY(-2px);
+}
+
+.projeto-relatorios .botao-pdf {
+    background: #edf3f8;
+    color: #16466c;
+}
+
+.projeto-relatorios .botao-pdf:hover {
+    background: #dceaf5;
+    transform: translateY(-2px);
+}
+
+/* VISUALIZADOR INTERNO */
+
+.projeto-relatorios .visualizador-relatorio {
+    margin-top: 22px;
+    border: 1px solid #d6e2ed;
+    border-radius: 13px;
+    overflow: hidden;
+    background: #ffffff;
+    animation: aparecerRelatorio 0.35s ease;
+}
+
+.projeto-relatorios .visualizador-relatorio[hidden] {
+    display: none;
+}
+
+@keyframes aparecerRelatorio {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CABEÇALHO DO DOCUMENTO */
+
+.projeto-relatorios .documento-cabecalho {
+    padding: 25px;
+    background: linear-gradient(135deg, #102b46, #1769aa);
+    color: #ffffff;
+}
+
+.projeto-relatorios .documento-cabecalho > span {
+    color: #9bdcff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.projeto-relatorios .documento-cabecalho h3 {
+    margin: 12px 0 8px;
+    color: #ffffff;
+    font-size: 1.4rem;
+    line-height: 1.35;
+}
+
+.projeto-relatorios .documento-cabecalho p {
+    margin: 0;
+    color: #d5e5f3;
+    font-size: 0.87rem;
+    line-height: 1.7;
+}
+
+/* CORPO DO DOCUMENTO */
+
+.projeto-relatorios .documento-corpo {
+    padding: 26px;
+    color: #344256;
+}
+
+.projeto-relatorios .documento-corpo h5 {
+    margin: 25px 0 12px;
+    padding-left: 12px;
+    border-left: 4px solid #2683c6;
+    color: #123b5d;
+    font-size: 1rem;
+}
+
+.projeto-relatorios .documento-corpo h5:first-child {
+    margin-top: 0;
+}
+
+.projeto-relatorios .documento-corpo > p {
+    margin: 10px 0;
+    color: #4b5b6c;
+    line-height: 1.8;
+    font-size: 0.93rem;
+}
+
+/* TABELA DE RESULTADOS */
+
+.projeto-relatorios .tabela-relatorio {
+    display: grid;
+    gap: 0;
+    margin-top: 14px;
+    border: 1px solid #dce6ef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.projeto-relatorios .tabela-relatorio div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 15px;
+    background: #f8fbfe;
+    border-bottom: 1px solid #e4ebf2;
+}
+
+.projeto-relatorios .tabela-relatorio div:last-child {
+    border-bottom: 0;
+}
+
+.projeto-relatorios .tabela-relatorio span {
+    color: #5b6b7b;
+    font-size: 0.88rem;
+}
+
+.projeto-relatorios .tabela-relatorio strong {
+    color: #123b5d;
+    font-size: 0.88rem;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* BLOCOS DE COMANDO */
+
+.projeto-relatorios .comando-relatorio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 14px 0;
+    padding: 15px;
+    border-radius: 9px;
+    background: #102b46;
+}
+
+.projeto-relatorios .comando-relatorio span {
+    color: #9bdcff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.projeto-relatorios .comando-relatorio code {
+    color: #ffffff;
+    font-family: Consolas, monospace;
+    font-size: 0.88rem;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+/* RESULTADOS DOS TESTES */
+
+.projeto-relatorios .resultado-relatorio {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin: 14px 0;
+    padding: 16px;
+    border: 1px solid #d7eee0;
+    border-radius: 10px;
+    background: #f1faf4;
+}
+
+.projeto-relatorios .indicador-sucesso {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+    margin-top: 5px;
+    border-radius: 50%;
+    background: #20a45b;
+    box-shadow: 0 0 0 4px #d7f3e1;
+}
+
+.projeto-relatorios .resultado-relatorio strong {
+    color: #176b3a;
+    font-size: 0.9rem;
+}
+
+.projeto-relatorios .resultado-relatorio p {
+    margin: 5px 0 0;
+    color: #4b6656;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* OBSERVAÇÕES */
+
+.projeto-relatorios .observacao-relatorio {
+    padding: 16px;
+    border-left: 4px solid #d69e2e;
+    border-radius: 7px;
+    background: #fff9e9;
+    color: #72551c;
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.projeto-relatorios .fim-documento {
+    margin-top: 27px;
+    padding-top: 17px;
+    border-top: 1px solid #e1e8ef;
+    color: #8190a0;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* NOTA FINAL */
+
+.projeto-relatorios .nota-final-relatorios {
+    margin-top: 25px;
+    padding: 17px;
+    border: 1px solid #dce6ef;
+    border-radius: 10px;
+    background: #f3f7fb;
+    color: #536477;
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.projeto-relatorios .nota-final-relatorios strong {
+    color: #123b5d;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+    .projeto-relatorios .cabecalho-relatorios {
+        padding: 20px;
+    }
+
+    .projeto-relatorios .cabecalho-relatorios h3 {
+        font-size: 1.45rem;
+    }
+
+    .projeto-relatorios .cartao-relatorio {
+        padding: 17px;
+    }
+
+    .projeto-relatorios .topo-cartao-relatorio {
+        flex-wrap: wrap;
+    }
+
+    .projeto-relatorios .status-relatorio {
+        margin-left: 63px;
+    }
+
+    .projeto-relatorios .acoes-relatorio {
+        flex-direction: column;
+    }
+
+    .projeto-relatorios .acoes-relatorio button,
+    .projeto-relatorios .acoes-relatorio a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .projeto-relatorios .documento-cabecalho {
+        padding: 20px;
+    }
+
+    .projeto-relatorios .documento-cabecalho h3 {
+        font-size: 1.2rem;
+    }
+
+    .projeto-relatorios .documento-corpo {
+        padding: 19px;
+    }
+
+    .projeto-relatorios .tabela-relatorio div {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .projeto-relatorios .tabela-relatorio strong {
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
